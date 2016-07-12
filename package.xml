@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+  <name>depth_noiser</name>
+  <version>0.0.0</version>
+  <description>The depth_noiser package adds noise to a synthetic depth image</description>
+
+
+  <maintainer email="mklingen@andrew.cmu.edu"/>
+
+  <license>MIT</license>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rosconsole</build_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rosconsole</run_depend>
+  <buildtool_depend>catkin</buildtool_depend>
+
+</package>

@@ -1,0 +1,13 @@
+<launch>
+  <!-- Nodelet manager for this pipeline -->
+  <node pkg="nodelet" type="nodelet" args="manager"
+        name="manager" output="screen"/>
+        
+    <remap from="/depth_image" to="/head/kinect2/qhd/image_depth"/>
+    <remap from="/output_depth" to="/head/kinect2/qhd/noisy_depth"/>
+    <node name="mask" pkg="depth_noiser" type="depth_noiser_node" output="screen">
+    <param name="constant_noise" value="0.01"/>
+    <param name="linear_noise" value="0.001"/>
+    <param name="quadratic_noise" value="0.0001"/>
+    </node>
+</launch>
